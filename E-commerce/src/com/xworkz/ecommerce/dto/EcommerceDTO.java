@@ -4,7 +4,7 @@ import java.io.Serializable;
 public class EcommerceDTO implements Serializable {
 	
 	private String userName;
-	private String passWord;
+	transient private String passWord;
 	private long shopRegisterNumber;
 	private String location;
 	private long customerBase;
