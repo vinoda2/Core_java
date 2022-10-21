@@ -1,12 +1,10 @@
 package com.xworkz.ecommerce.service;
 
-import java.io.Serializable;
-
 import com.xworkz.ecommerce.dao.EcommerceDAO;
 import com.xworkz.ecommerce.dto.EcommerceDTO;
 import com.xworkz.ecommerce.exception.InvalidData;
 
-public class EcommerceServiceImp implements EcommerceService, Serializable{
+public class EcommerceServiceImp implements EcommerceService{
 	private EcommerceDAO dao;
 	String regexp="^(?=.*[0-9])"+"(?=.*[a-z])(?=.*[A-Z])"+"(?=.*[@#$%^&+=])"+"(?=\\S+$).{8,20}$";
 	
@@ -42,12 +40,12 @@ public class EcommerceServiceImp implements EcommerceService, Serializable{
 					throw new InvalidData("enter the correct password");
 				}
 				else {
-					/*System.out.println("username is:"+ecommerceDTO.getUserName());
+					System.out.println("username is:"+ecommerceDTO.getUserName());
 					System.out.println("password valid:"+ecommerceDTO.getPassWord());
 					System.out.println("your customer base is:"+ecommerceDTO.getCustomerBase());
 					System.out.println("location is:"+ecommerceDTO.getLocation());
-					*/
-					System.out.println("object saved");
+					
+					return true;
 				}
 			
 		}else {

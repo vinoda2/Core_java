@@ -1,8 +1,6 @@
 package com.xworkz.ecommerce.dto;
 
-import java.io.Serializable;
-
-public class ProductDTO implements Serializable {
+public class ProductDTO {
 	
 	private String productName;
 	private String productID;
